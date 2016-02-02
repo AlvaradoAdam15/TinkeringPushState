@@ -8,8 +8,16 @@
     Hola mon! Mira la consola
 
     <script>
-        var stateObj = { foo: "bar" };
-        history.pushState(stateObj, "page 2", "bar.html");
+        (function(){
+            var stateObj = { foo: "bar" };
+            history.pushState(stateObj, "page 2", "bar.html");
+
+            console.debug(stateObj);
+        }());
+
+        console.debug(stateObj);
+
+
     </script>
 
 </body>
